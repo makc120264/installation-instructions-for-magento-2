@@ -35,16 +35,16 @@
             sudo /etc/init.d/apache2 restart // перезапустить apache
 
         настроить права доступа для папок:
-        cd /var/www/html                                                             // cd <your Magento install dir> 
-        sudo find . -type f -exec chmod 644 {} \;                                    // 644 permission for files
-        sudo find . -type d -exec chmod 755 {} \;                                    // 755 permission for directory
-        sudo find /var/www/html/var -type d -exec chmod 777 -R {} \;                 // 777 permission for var folder
+        cd /var/www/html                                                    // cd <your Magento install dir> 
+        sudo find . -type f -exec chmod 644 {} \;                           // 644 permission for files
+        sudo find . -type d -exec chmod 755 {} \;                           // 755 permission for directory
+        sudo find /var/www/html/var -type d -exec chmod 777 -R {} \;        // 777 permission for var folder
         sudo find /var/www/html/pub/media -type d -exec chmod 777 -R {} \;
-        sudo find /var/www/html/pub/static -type d -exec chmod 777 -R {} \;
+        sudo find /var/www/html/pub/static -type d -exec chmod 777 -R {} \; 
         sudo chmod 777 -R /var/www/html/app/etc
         sudo chmod 777 -R /var/www/html/generated
         sudo chmod 644 -R /var/www/html/app/etc/*.xml
-        sudo chown -R www-data /root                                                 //chown -R :<web server group> .
+        sudo chown -R www-data /root                                        //chown -R :<web server group> .
         sudo chmod -R u+x /var/www/html/bin/magento
         sudo chmod 777 /var/www/html/app/etc/di.xml
         
@@ -62,5 +62,5 @@
             ........
 
     потом выполнить в терминале
-        sudo a2enmod rewrite // включить модуль mod_rewrite
-        sudo /etc/init.d/apache2 restart // перезапустить apache
+        sudo a2enmod rewrite                   // включить модуль mod_rewrite
+        sudo /etc/init.d/apache2 restart       // перезапустить apache
