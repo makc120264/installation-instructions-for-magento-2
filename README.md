@@ -47,8 +47,8 @@
         sudo chown -R www-data /root                                                 //chown -R :<web server group> .
         sudo chmod -R u+x /var/www/html/bin/magento
         sudo chmod 777 /var/www/html/app/etc/di.xml
-
-Если чистая система запустилась "криво" (не подключились стили), надо изменить кофигурацию apache:
+        
+    Если чистая система запустилась "криво" (не подключились стили), надо изменить кофигурацию apache:
     в файле /etc/apache2/apache2.conf
     изменить строки:
         <Directory /var/www/>
