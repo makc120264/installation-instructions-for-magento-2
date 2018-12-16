@@ -28,7 +28,7 @@
         sudo a2enmod php7.x // включить модуль php
         sudo /etc/init.d/apache2 restart // перезапустить apache
 
-    1.4 Установка Magento 2.x:
+    2. Установка Magento 2.x:
         запустить в браузере [host]/setup/#/landing-install
         установить необходимые модули php
             sudo apt-get install php7.1-[имя_модуля]
